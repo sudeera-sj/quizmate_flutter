@@ -1,0 +1,3 @@
+class APIRepo {
+  APIRepo._();
+}
