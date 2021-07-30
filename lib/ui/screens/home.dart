@@ -9,7 +9,7 @@ import 'package:quizmate_flutter/ui/components/rounded_button.dart';
 import 'package:quizmate_flutter/ui/screens/about_app.dart';
 import 'package:quizmate_flutter/ui/screens/quiz_creator.dart';
 
-/// This is the opening screen of the application that will displayed to the user.
+/// This is the opening screen of the application that will be displayed to the user.
 /// Once the trivia categories are successfully loaded into the state,
 /// allows the user to proceed and create a quiz.
 class Home extends StatelessWidget {

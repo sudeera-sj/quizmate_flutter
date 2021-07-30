@@ -12,7 +12,7 @@ extension DurationExtension on Duration {
     final minutes = seconds ~/ Duration.secondsPerMinute;
     seconds -= minutes * Duration.secondsPerMinute;
 
-    const List<String> tokens = [];
+    final List<String> tokens = [];
 
     if (days != 0) {
       tokens.add('$days ${days == 1 ? "day" : "days"}');

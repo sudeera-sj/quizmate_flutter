@@ -81,8 +81,16 @@ class _QuizMate extends StatelessWidget {
           primaryColor: Colors.blue,
           primaryColorLight: Colors.blueAccent,
           accentColor: Colors.lightGreen,
-          backgroundColor: Color.fromARGB(240, 255, 255, 255),
-          textTheme: GoogleFonts.rubikTextTheme(ThemeData.light().textTheme),
+          backgroundColor: Color.fromARGB(224, 255, 255, 255),
+          scaffoldBackgroundColor: Color.fromARGB(240, 255, 255, 255),
+          bottomNavigationBarTheme: BottomNavigationBarThemeData(
+            backgroundColor: Colors.blue,
+            selectedItemColor: Colors.white,
+            elevation: 4,
+          ),
+          textTheme: GoogleFonts.rubikTextTheme(ThemeData
+              .light()
+              .textTheme),
         ),
         darkTheme: ThemeData(
           brightness: Brightness.dark,
@@ -91,7 +99,15 @@ class _QuizMate extends StatelessWidget {
           primaryColorLight: Colors.purpleAccent,
           accentColor: Colors.yellow,
           backgroundColor: Colors.white24,
-          textTheme: GoogleFonts.rubikTextTheme(ThemeData.dark().textTheme),
+          scaffoldBackgroundColor: Colors.white10,
+          bottomNavigationBarTheme: BottomNavigationBarThemeData(
+            backgroundColor: Colors.purple,
+            selectedItemColor: Colors.white,
+            elevation: 4,
+          ),
+          textTheme: GoogleFonts.rubikTextTheme(ThemeData
+              .dark()
+              .textTheme),
         ),
         home: const Home(),
       ),

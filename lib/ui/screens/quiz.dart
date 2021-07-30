@@ -54,7 +54,6 @@ class Quiz extends StatelessWidget {
         return shouldPop ?? false;
       },
       child: Scaffold(
-        backgroundColor: theme.backgroundColor,
         body: Container(
           child: BlocBuilder<QuizBloc, QuizState>(
             builder: (_, state) {

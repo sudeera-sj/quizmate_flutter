@@ -13,7 +13,6 @@ class QuizAnswers extends StatelessWidget {
     final theme = Theme.of(context);
 
     return Scaffold(
-      backgroundColor: theme.backgroundColor,
       body: Container(
         child: ListView(
           shrinkWrap: true,

@@ -20,7 +20,6 @@ class QuizStats extends StatelessWidget {
     final theme = Theme.of(context);
 
     return Scaffold(
-      backgroundColor: theme.backgroundColor,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(

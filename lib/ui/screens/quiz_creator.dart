@@ -27,7 +27,6 @@ class QuizCreator extends StatelessWidget {
     final theme = Theme.of(context);
 
     return Scaffold(
-      backgroundColor: theme.backgroundColor,
       body: Container(
         padding: const EdgeInsets.symmetric(vertical: 24),
         child: Column(
