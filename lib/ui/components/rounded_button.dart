@@ -6,17 +6,13 @@ class RoundedButton extends StatelessWidget {
   final String _label;
   final VoidCallback _onPressed;
 
-  const RoundedButton(this._filled, this._label, this._onPressed);
+  const RoundedButton(this._filled, this._label, this._onPressed, {Key? key}) : super(key: key);
 
-  const RoundedButton.filled(String label, VoidCallback onPressed)
-      : _filled = true,
-        _label = label,
-        _onPressed = onPressed;
+  const RoundedButton.filled({required String label, required VoidCallback onPressed, Key? key})
+      : this(true, label, onPressed, key: key);
 
-  const RoundedButton.outlined(String label, VoidCallback onPressed)
-      : _filled = false,
-        _label = label,
-        _onPressed = onPressed;
+  const RoundedButton.outlined({required String label, required VoidCallback onPressed, Key? key})
+      : this(false, label, onPressed, key: key);
 
   @override
   Widget build(BuildContext context) {
