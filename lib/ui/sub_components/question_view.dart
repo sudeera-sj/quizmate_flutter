@@ -63,6 +63,7 @@ class _QuestionAnswers extends StatelessWidget {
       itemBuilder: (context, index) {
         return RadioListTile<String>(
           contentPadding: const EdgeInsets.all(0),
+          dense: true,
           title: Text(
             answers[index],
             style: Theme.of(context).textTheme.bodyText2,
