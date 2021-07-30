@@ -6,6 +6,7 @@ import 'package:quizmate_flutter/bloc/category/category_bloc.dart';
 import 'package:quizmate_flutter/bloc/category/category_state.dart';
 import 'package:quizmate_flutter/models/util/task_progress.dart';
 import 'package:quizmate_flutter/ui/components/rounded_button.dart';
+import 'package:quizmate_flutter/ui/screens/about_app.dart';
 import 'package:quizmate_flutter/ui/screens/quiz_creator.dart';
 
 /// Created by Sudeera Sandaruwan
@@ -61,7 +62,7 @@ class Home extends StatelessWidget {
                                   padding: const EdgeInsets.only(top: 16, right: 16),
                                   splashRadius: 8,
                                   color: Colors.white,
-                                  onPressed: () {},
+                                  onPressed: () => Navigator.push(context, AboutApp.route()),
                                 ),
                               ],
                             ),
@@ -119,9 +120,7 @@ class _FooterContent extends StatelessWidget {
         if (state.progress == TaskProgress.success) {
           return RoundedButton.filled(
             label: "Start a new Quiz",
-            onPressed: () {
-              Navigator.of(context).push(QuizCreator.route());
-            },
+            onPressed: () => Navigator.push(context, QuizCreator.route()),
           );
         } else {
           return Column(

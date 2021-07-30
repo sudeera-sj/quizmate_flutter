@@ -29,8 +29,11 @@ class RoundedButton extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.symmetric(vertical: 12, horizontal: 8),
           child: Text(
-            _label,
-            style: theme.textTheme.button!.copyWith(color: Colors.white, fontSize: 18),
+            _label.toUpperCase(),
+            style: theme.textTheme.button!.copyWith(
+              color: Colors.white,
+              fontSize: 14,
+            ),
           ),
         ),
       );
@@ -45,8 +48,11 @@ class RoundedButton extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.symmetric(vertical: 12, horizontal: 8),
           child: Text(
-            _label,
-            style: theme.textTheme.button!.copyWith(color: Colors.white, fontSize: 18),
+            _label.toUpperCase(),
+            style: theme.textTheme.button!.copyWith(
+              color: Colors.white,
+              fontSize: 14,
+            ),
           ),
         ),
       );
