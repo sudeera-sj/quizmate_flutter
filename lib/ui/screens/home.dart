@@ -9,7 +9,9 @@ import 'package:quizmate_flutter/ui/components/rounded_button.dart';
 import 'package:quizmate_flutter/ui/screens/about_app.dart';
 import 'package:quizmate_flutter/ui/screens/quiz_creator.dart';
 
-/// Created by Sudeera Sandaruwan
+/// This is the opening screen of the application that will displayed to the user.
+/// Once the trivia categories are successfully loaded into the state,
+/// allows the user to proceed and create a quiz.
 class Home extends StatelessWidget {
   static Route route() => MaterialPageRoute(builder: (_) => const Home());
 
@@ -106,6 +108,9 @@ class Home extends StatelessWidget {
   }
 }
 
+/// Footer content of the Home screen.
+/// Shows a progress indicator until the quiz categories are loaded.
+/// Once the categories are loaded, shows a button to proceed to the next screen.
 class _FooterContent extends StatelessWidget {
   const _FooterContent({Key? key}) : super(key: key);
 

@@ -4,8 +4,10 @@ import 'package:quizmate_flutter/bloc/quiz/quiz_bloc.dart';
 import 'package:quizmate_flutter/bloc/quiz/quiz_state.dart';
 import 'package:quizmate_flutter/ui/sub_components/answer_view.dart';
 
-/// Created by Sudeera Sandaruwan
+/// This screen displays the answers to the quiz and compares them with the answers provided by the user.
 class QuizAnswers extends StatelessWidget {
+  const QuizAnswers({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);

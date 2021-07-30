@@ -4,7 +4,7 @@ import 'package:quizmate_flutter/bloc/category/category_state.dart';
 import 'package:quizmate_flutter/models/util/connectivity_listener.dart';
 import 'package:quizmate_flutter/models/util/task_progress.dart';
 
-/// The BLoC component for category-related operations
+/// The BLoC component for category related operations
 class CategoryBloc extends Cubit<CategoryState> implements ConnectivityListener {
   final CategoryRepo _repo;
 

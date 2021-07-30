@@ -4,11 +4,11 @@ import 'package:quizmate_flutter/bloc/quiz/quiz_bloc.dart';
 import 'package:quizmate_flutter/ui/screens/results/quiz_answers.dart';
 import 'package:quizmate_flutter/ui/screens/results/quiz_stats.dart';
 
-/// Created by Sudeera Sandaruwan
+/// The screen that contains the answers view and the statistics view
 class QuizResults extends StatefulWidget {
-  static Route route() => MaterialPageRoute(builder: (_) => const QuizResults());
+  static Route route() => MaterialPageRoute(builder: (_) => const QuizResults._());
 
-  const QuizResults({Key? key}) : super(key: key);
+  const QuizResults._({Key? key}) : super(key: key);
 
   @override
   _QuizResultsState createState() => _QuizResultsState();
@@ -60,7 +60,7 @@ class _QuizResultsState extends State<QuizResults> {
         return shouldPop ?? false;
       },
       child: Scaffold(
-        body: _selectedIndex == 0 ? QuizAnswers() : QuizStats(),
+        body: _selectedIndex == 0 ? const QuizAnswers() : const QuizStats(),
         bottomNavigationBar: BottomNavigationBar(
           items: const <BottomNavigationBarItem>[
             const BottomNavigationBarItem(

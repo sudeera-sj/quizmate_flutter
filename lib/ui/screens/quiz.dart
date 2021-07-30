@@ -8,11 +8,12 @@ import 'package:quizmate_flutter/ui/components/rounded_button.dart';
 import 'package:quizmate_flutter/ui/screens/results/quiz_results.dart';
 import 'package:quizmate_flutter/ui/sub_components/question_view.dart';
 
-/// Created by Sudeera Sandaruwan
+/// This screen displays the created quiz to the user.
+/// The user can then select the answers or leave them blank if preferred, and proceed to submit the quiz.
 class Quiz extends StatelessWidget {
-  static Route route() => MaterialPageRoute(builder: (_) => const Quiz());
+  static Route route() => MaterialPageRoute(builder: (_) => const Quiz._());
 
-  const Quiz({Key? key}) : super(key: key);
+  const Quiz._({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -77,6 +78,7 @@ class Quiz extends StatelessWidget {
   }
 }
 
+/// This view is shown until the request to fetch the quiz is resolved
 class _LoadingView extends StatelessWidget {
   const _LoadingView({Key? key}) : super(key: key);
 
@@ -102,6 +104,7 @@ class _LoadingView extends StatelessWidget {
   }
 }
 
+/// Once a quiz with a set of questions are successfully fetched from the API, this view is displayed.
 class _QuestionList extends StatelessWidget {
   final List<Question> _questions;
 
@@ -177,6 +180,7 @@ class _QuestionList extends StatelessWidget {
   }
 }
 
+/// If the returned quiz contains no questions, this view is displayed.
 class _EmptyView extends StatelessWidget {
   const _EmptyView({Key? key}) : super(key: key);
 
@@ -222,6 +226,7 @@ class _EmptyView extends StatelessWidget {
   }
 }
 
+/// If the request to fetch the quiz was unsuccessful, this view is displayed.
 class _ErrorView extends StatelessWidget {
   const _ErrorView({Key? key}) : super(key: key);
 

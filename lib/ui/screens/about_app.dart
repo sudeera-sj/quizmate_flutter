@@ -44,6 +44,7 @@ class AboutApp extends StatelessWidget {
   }
 }
 
+/// A card containing an overview of the application and a link to the source code at GitHub
 class _Overview extends StatelessWidget {
   const _Overview({Key? key}) : super(key: key);
 
@@ -106,6 +107,7 @@ class _Overview extends StatelessWidget {
   }
 }
 
+/// A card containing a list of topics and concepts used in the app
 class _TopicsAndConcepts extends StatelessWidget {
   const _TopicsAndConcepts({Key? key}) : super(key: key);
 
@@ -170,6 +172,7 @@ class _TopicsAndConcepts extends StatelessWidget {
     );
   }
 
+  /// Creates a list item displaying the given title and subtitle
   ListTile _createListItem({required String title, required String subtitle}) {
     return ListTile(
       leading: const Icon(Icons.check_circle_outline_rounded),
@@ -182,6 +185,7 @@ class _TopicsAndConcepts extends StatelessWidget {
   }
 }
 
+/// A card containing a list of tools, resources and libraries used in the app
 class _ToolsResourcesAndLibraries extends StatelessWidget {
   const _ToolsResourcesAndLibraries({Key? key}) : super(key: key);
 
@@ -238,6 +242,7 @@ class _ToolsResourcesAndLibraries extends StatelessWidget {
     );
   }
 
+  /// Creates a list item displaying the given title that directs to the given url when clicked
   ListTile _createListItem({required String title, required String url}) {
     return ListTile(
       leading: const Icon(Icons.library_books_rounded),
@@ -252,6 +257,7 @@ class _ToolsResourcesAndLibraries extends StatelessWidget {
   }
 }
 
+/// A card containing a list of credits related to the development of the app
 class _Credits extends StatelessWidget {
   const _Credits({Key? key}) : super(key: key);
 
@@ -306,6 +312,7 @@ class _Credits extends StatelessWidget {
     );
   }
 
+  /// Creates a list item displaying the given title and subtitle that directs to the given url when clicked
   ListTile _createListItem({
     required IconData icon,
     required String title,

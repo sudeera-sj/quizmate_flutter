@@ -1,1 +1,7 @@
-enum TaskProgress { idle, pending, success, error }
+/// States representing each stage of an API call
+enum TaskProgress {
+  idle,
+  pending,
+  success,
+  error,
+}

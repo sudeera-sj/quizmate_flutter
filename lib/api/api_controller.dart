@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 
+/// Contains the customized Dio instance for making API calls
 class APIController {
   final Dio requestManager = Dio(
     BaseOptions(

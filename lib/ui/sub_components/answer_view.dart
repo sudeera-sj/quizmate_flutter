@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:quizmate_flutter/models/data/question.dart';
 
-/// Created by Sudeera Sandaruwan
+/// This component is used to present how the user has answered a particular question.
+///
+///
+/// If the answer is correct, the background would be in green color.
+///
+/// If the answer is incorrect, the background will be in crimson color.
+///
+/// If the user hasn't answered the question, the background will be in dark orange color.
 class AnswerView extends StatelessWidget {
   final int _index;
   final Question _question;
@@ -62,6 +69,9 @@ class AnswerView extends StatelessWidget {
     );
   }
 
+  /// Returns a color based on the given answer to the question.
+  ///
+  /// Green if correct, Red if incorrect and orange if unanswered
   Color _getCardColor() {
     if (_question.givenAnswer.isEmpty) {
       return Colors.orange;

@@ -1,3 +1,4 @@
+/// Represents a quiz category in the API
 class Category {
   static const Category defaultCategory = Category(0, 'Any Category');
 

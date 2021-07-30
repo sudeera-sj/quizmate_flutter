@@ -7,7 +7,7 @@ import 'package:quizmate_flutter/models/util/question_difficulty.dart';
 import 'package:quizmate_flutter/models/util/question_type.dart';
 import 'package:quizmate_flutter/models/util/task_progress.dart';
 
-/// The BLoC component for quiz-related operations
+/// The BLoC component for quiz related operations
 class QuizBloc extends Cubit<QuizState> implements ConnectivityListener {
   final QuizRepo _repo;
 
@@ -60,6 +60,7 @@ class QuizBloc extends Cubit<QuizState> implements ConnectivityListener {
     }
   }
 
+  /// Updates the given answer of a question
   void answerQuestion(int question, int answer) {
     final currentQuestion = state.questions[question];
 
@@ -70,7 +71,9 @@ class QuizBloc extends Cubit<QuizState> implements ConnectivityListener {
     emit(state.copyWith(questions: state.questions.toList(growable: false)));
   }
 
+  /// Marks the submission of a quiz
   void submitQuiz() => emit(state.copyWith(end: DateTime.now()));
 
+  /// Clears all current quiz related properties and reverts back to the initial state
   void endQuiz() => emit(QuizState.initialState);
 }

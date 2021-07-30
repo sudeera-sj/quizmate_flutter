@@ -1,5 +1,6 @@
 import 'package:quizmate_flutter/models/data/category.dart';
 
+/// Represents a successful API response for a category request
 class TriviaCategories {
   final List<Category> categories;
 

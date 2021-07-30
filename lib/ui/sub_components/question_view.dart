@@ -3,7 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quizmate_flutter/bloc/quiz/quiz_bloc.dart';
 import 'package:quizmate_flutter/models/data/question.dart';
 
-/// Created by Sudeera Sandaruwan
+/// Displays a questions with a set of possible answers.
+/// The answer given by the user will be updated upon selection.
 class QuestionView extends StatelessWidget {
   final int _index;
   final Question _question;
@@ -45,6 +46,7 @@ class QuestionView extends StatelessWidget {
   }
 }
 
+/// The provided list of answers to a specific question. The one selected by the user is highlighted.
 class _QuestionAnswers extends StatelessWidget {
   final int _index;
   final Question _question;

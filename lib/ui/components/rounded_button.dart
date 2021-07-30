@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-/// Created by Sudeera Sandaruwan
+/// A simple button with rounded corners. Has 2 flavors. Filled and Outlined.
 class RoundedButton extends StatelessWidget {
   final bool _filled;
   final String _label;

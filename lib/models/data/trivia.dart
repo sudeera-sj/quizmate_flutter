@@ -1,3 +1,4 @@
+/// Represents a successful API response for a quiz request
 class Trivia {
   final int responseCode;
   final List<_TriviaEntry> results;
@@ -26,5 +27,5 @@ class _TriviaEntry {
         this.question = json["question"],
         this.correctAnswer = json["correct_answer"],
         this.incorrectAnswers =
-            json["incorrect_answers"] != null ? json["incorrect_answers"].cast<String>() : [];
+        json["incorrect_answers"] != null ? json["incorrect_answers"].cast<String>() : [];
 }

@@ -1,4 +1,5 @@
 extension DurationExtension on Duration {
+  /// Formats the duration into string signifying days, hours, minutes and seconds.
   String get formattedValue {
     int seconds = this.inSeconds;
 
@@ -11,7 +12,7 @@ extension DurationExtension on Duration {
     final minutes = seconds ~/ Duration.secondsPerMinute;
     seconds -= minutes * Duration.secondsPerMinute;
 
-    final List<String> tokens = [];
+    const List<String> tokens = [];
 
     if (days != 0) {
       tokens.add('$days ${days == 1 ? "day" : "days"}');

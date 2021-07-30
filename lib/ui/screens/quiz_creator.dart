@@ -17,9 +17,9 @@ import 'package:syncfusion_flutter_sliders/sliders.dart';
 /// This screen provides the user with a set of options to customize a quiz.
 /// Includes the number of questions, quiz category, difficulty level and question type.
 class QuizCreator extends StatelessWidget {
-  static Route route() => MaterialPageRoute(builder: (_) => const QuizCreator());
+  static Route route() => MaterialPageRoute(builder: (_) => const QuizCreator._());
 
-  const QuizCreator({Key? key}) : super(key: key);
+  const QuizCreator._({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -1,3 +1,4 @@
+/// Represents a single question in a quiz
 class Question {
   final String text;
   final String correctAnswer;

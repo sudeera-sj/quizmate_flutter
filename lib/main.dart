@@ -10,10 +10,13 @@ import 'package:quizmate_flutter/bloc/connectivity/ConnectivityBloc.dart';
 import 'package:quizmate_flutter/bloc/quiz/quiz_bloc.dart';
 import 'package:quizmate_flutter/ui/screens/home.dart';
 
+/// This is the entry point to the application.
 void main() {
   runApp(App(APIController()));
 }
 
+/// Primary container of the app. Provides instances of the repositories down the app hierarchy.
+/// This helps with Dependency Injection.
 class App extends StatelessWidget {
   final APIController _apiController;
 
@@ -38,6 +41,10 @@ class App extends StatelessWidget {
   }
 }
 
+/// Takes repositories passed on from upwards and uses them to provide BLoC instances down the app hierarchy.
+/// This also helps with Dependency Injection.
+///
+/// This is also where the MaterialApp instance containing the actual UIs of the app is initialized
 class _QuizMate extends StatelessWidget {
   const _QuizMate({Key? key}) : super(key: key);
 

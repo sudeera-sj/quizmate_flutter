@@ -8,8 +8,13 @@ import 'package:quizmate_flutter/models/util/pie_chart_data.dart';
 import 'package:quizmate_flutter/util/extensions/duration_extensions.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
-/// Created by Sudeera Sandaruwan
+/// This screen displays a collection of statistics about the completed quiz.
+/// Includes when the quiz was started and submitted, total duration taken to complete the quiz,
+/// a pie chart representing how the user has faced the quiz and finally,
+/// a score based on the number of correct answers.
 class QuizStats extends StatelessWidget {
+  const QuizStats({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -100,6 +105,7 @@ class QuizStats extends StatelessWidget {
   }
 }
 
+/// Shows a chart visualizing how the user has answered the quiz.
 class _AnswerChart extends StatelessWidget {
   final List<Question> _questions;
 
